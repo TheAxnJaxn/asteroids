@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Krista's Asteroids</title>
+
+    <script src="lib/util.js"></script>
+    <script src="lib/movingObject.js"></script>
+    <script src="lib/asteroid.js"></script>
+    <script src="lib/ship.js"></script>
+    <script src="lib/bullet.js"></script>
+    <script src="lib/game.js"></script>
+    <script src="lib/gameView.js"></script>
+  </head>
+
+  <body>
+
+  <canvas id="game-canvas"></canvas>
+
+    <script type="application/javascript">
+    (function () {
+      var canvasEl = document.getElementsByTagName("canvas")[0];
+      //  canvasEl.height = window.innerHeight;
+      //  canvasEl.width = window.innerWidth;
+       canvasEl.height = Asteroids.Game.DIM_Y;
+       canvasEl.width = Asteroids.Game.DIM_X;
+
+      //  var ctx = canvasEl.getContext("2d");
+      //  var game = new Asteroids.Game();
+      //  new Asteroids.GameView(game, ctx).start();
+       new Asteroids.GameView(
+         canvasEl.width,
+         canvasEl.height,
+         canvasEl.start();
+    })();
+     </script>
+
+  </body>
+</html>
