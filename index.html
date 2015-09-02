@@ -21,20 +21,16 @@
   <canvas id="game-canvas"></canvas>
 
     <script type="application/javascript">
-    (function () {
-      var canvasEl = document.getElementsByTagName("canvas")[0];
+      (function () {
+        var canvasEl = document.getElementsByTagName("canvas")[0];
 
-      canvasEl.height = window.innerHeight;
-      canvasEl.width = window.innerWidth;
+        canvasEl.height = window.innerHeight;
+        canvasEl.width = window.innerWidth;
 
-      var game = new Asteroids.Game(canvasEl);
-      var gameView = new Asteroids.GameView(game, canvasEl).start();
-
-      // move the following in to GameView or Game ~
-      // // adds listener to resize canvas to full window size
-      // window.addEventListener('resize', gameView.resize, false);
-    })();
-     </script>
+        var game = new Asteroids.Game(canvasEl);
+        var gameView = new Asteroids.GameView(game, canvasEl).start();
+      })();
+    </script>
 
   </body>
 </html>
