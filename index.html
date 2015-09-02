@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <title>Krista's Asteroids</title>
 
+    <link rel="stylesheet" type="text/css" href="./style.css" media="screen" />
+
     <script src="lib/util.js"></script>
     <script src="lib/movingObject.js"></script>
     <script src="lib/asteroid.js"></script>
@@ -17,17 +19,20 @@
   <body>
 
   <canvas id="game-canvas"></canvas>
-  <canvas id="score-canvas"></canvas>
 
     <script type="application/javascript">
     (function () {
       var canvasEl = document.getElementsByTagName("canvas")[0];
 
-      canvasEl.height = Asteroids.Game.DIM_Y;
-      canvasEl.width = Asteroids.Game.DIM_X;
-      
-      var game = new Asteroids.Game();
-      new Asteroids.GameView(game, canvasEl).start();
+      canvasEl.height = window.innerHeight;
+      canvasEl.width = window.innerWidth;
+
+      var game = new Asteroids.Game(canvasEl);
+      var gameView = new Asteroids.GameView(game, canvasEl).start();
+
+      // move the following in to GameView or Game ~
+      // // adds listener to resize canvas to full window size
+      // window.addEventListener('resize', gameView.resize, false);
     })();
      </script>
 
